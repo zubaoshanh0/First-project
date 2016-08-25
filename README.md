@@ -7,6 +7,13 @@ changelog:
 - add decorator transform
 - off some eslint rules
 - pass store object in html and parser in client side to sync states
+- add example to get the params from path & switch path programmly
+- push store in html to sync states
+- if(state) to avoid the dup request
+- import lodash
+  1. using import the specific method 
+  2. add the module into webpack vendor
+- add child router for contact component
 
 > [React Starter Kit](https://www.reactstarterkit.com) is an opinionated
 > boilerplate for web development built on top of [Node.js](https://nodejs.org/),

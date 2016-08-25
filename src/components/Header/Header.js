@@ -34,11 +34,6 @@ import logoUrl from './logo-small.png';
 
 @withStyles(s)
 class Header extends Component {
-		  
-		
-	btnClick(e){
-        console.info(e.target.value);//this为该组件类
-    }
   render() {
     return (
       <div className={s.root}>
@@ -53,7 +48,6 @@ class Header extends Component {
             <p className={s.bannerDesc}>Complex web apps made easy</p>
           </div>
         </div>
-        <textarea onChange={this.btnClick.bind(this)} placeholder="text" ></textarea>
       </div>
     );
   }

@@ -8,25 +8,41 @@
  */
 
 import React from 'react';
-// import Contact from './Contact';
-import { observable } from 'mobx';
-
+import Contact from './Contact';
+import s from './Contact.css'
 export default {
 
   path: '/contact',
 
-  async action() {
-    const Contact = await new Promise((resolve) => {
-      require.ensure([], (require) => resolve(require('./Contact').default));
-    });
-    const timerData = observable({
-    secondsPassed: 0,
-})
+  // async action() {
+  //   const Contact = await new Promise((resolve) => {
+  //     require.ensure([], (require) => resolve(require('./Contact').default));
+  //   });
 
-setInterval(() => {
-    timerData.secondsPassed++
-}, 1000)
-    return <Contact timerData={timerData} />;
+
+  //   return <Contact />;
+  // },
+  async action({ next }) {
+    const component = await next();
+    return component;
   },
+  children: [
+    {
+      path: '/', // Same as /parent
+      action: () => <Contact />,
+    },
+    {
+      path: '/name',
+      action: async () => {
+        console.log('in name router')
+        return (
+          <div>
+            <div className={s.open} ></div>
+            <Contact />
+          </div>
+        )
+      },
+    },
+  ],
 
 };

@@ -13,7 +13,6 @@ import s from './Contact.css'
 import { observer } from 'mobx-react'
 import { testInstance } from './../../data/models/testModel'
 import { userInfo } from './../../data/models/UserInfo'
-import history from './../../core/history'
 
 const title = 'Contact Us'
 
@@ -48,17 +47,11 @@ class Contact extends React.Component {
 	      <span>
 	        Seconds passed: { testInstance.timerData.secondsPassed }
 	      </span>
-	      <input type="button" value="弹框" onClick={this.jump} />
+	      <input type="button" value="弹框" onClick={this.handleClick}/>
 	    </div>
-     )
+      )
   }
-  handleClick(){
-  	userInfo.authorize=!userInfo.authorize
-  	console.log(userInfo.authorize)
-  }
-  jump() {
-    history.push('/contact/name')
-  }
+  
 }
 
 Contact.propTypes = {
