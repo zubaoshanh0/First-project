@@ -1,0 +1,17 @@
+
+
+.wrap { width: 400px; height: 320px; overflow: hidden; border: 1px solid #eee; margin: 0 auto; position: relative}
+.list{position: absolute; top: 0; left: 0; height: 320px; width: 2000px;padding-left:0;margin:0;transition:3s;}
+.list li{list-style: none;float: left;width: 400px;}
+.list li img{vertical-align: top}
+
+.btn {position: absolute; overflow:hidden; bottom: 0; left: 125px;padding:0; width: 150px; }
+.btn li { margin: 10px; cursor: pointer; background:blue;float:left;width:10px;height:10px;list-style: none;}
+
+.btn .active { background:red;}
+
+
+
+
+
+
