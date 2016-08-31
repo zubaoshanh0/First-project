@@ -11,7 +11,7 @@ class UserInfo {
     @observable userPreviligy = null;
     @observable authorize = false;
     @observable news = [];
-
+    @observable imgrun=['./images/6.jpg','./images/6.jpg','./images/6.jpg','./images/6.jpg','./images/6.jpg']
     constructor() {
         console.log('constructror')
     }
@@ -20,6 +20,7 @@ class UserInfo {
         this.name = user.name
         this.userPreviligy = user.userPreviligy
         this.authorize = user.authorize
+        this.imgrun=user.imgrun
     }
     @action
     deleteNewsById(newsid) {

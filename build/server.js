@@ -132,7 +132,7 @@ module.exports =
   
   var _routes2 = _interopRequireDefault(_routes);
   
-  var _assets = __webpack_require__(96);
+  var _assets = __webpack_require__(104);
   
   var _assets2 = _interopRequireDefault(_assets);
   
@@ -955,23 +955,23 @@ module.exports =
   
   var _contact2 = _interopRequireDefault(_contact);
   
-  var _login = __webpack_require__(79);
+  var _login = __webpack_require__(87);
   
   var _login2 = _interopRequireDefault(_login);
   
-  var _register = __webpack_require__(83);
+  var _register = __webpack_require__(91);
   
   var _register2 = _interopRequireDefault(_register);
   
-  var _content = __webpack_require__(87);
+  var _content = __webpack_require__(95);
   
   var _content2 = _interopRequireDefault(_content);
   
-  var _error = __webpack_require__(91);
+  var _error = __webpack_require__(99);
   
   var _error2 = _interopRequireDefault(_error);
   
-  var _detail = __webpack_require__(92);
+  var _detail = __webpack_require__(100);
   
   var _detail2 = _interopRequireDefault(_detail);
   
@@ -2360,7 +2360,7 @@ module.exports =
   
   var _createClass3 = _interopRequireDefault(_createClass2);
   
-  var _desc, _value, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5;
+  var _desc, _value, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6;
   
   var _mobx = __webpack_require__(68);
   
@@ -2431,6 +2431,8 @@ module.exports =
   
           _initDefineProp(this, 'news', _descriptor5, this);
   
+          _initDefineProp(this, 'imgrun', _descriptor6, this);
+  
           console.log('constructror');
       }
   
@@ -2441,6 +2443,7 @@ module.exports =
               this.name = user.name;
               this.userPreviligy = user.userPreviligy;
               this.authorize = user.authorize;
+              this.imgrun = user.imgrun;
           }
       }, {
           key: 'deleteNewsById',
@@ -2535,6 +2538,11 @@ module.exports =
       enumerable: true,
       initializer: function initializer() {
           return [];
+      }
+  }), _descriptor6 = _applyDecoratedDescriptor(_class.prototype, 'imgrun', [_mobx.observable], {
+      enumerable: true,
+      initializer: function initializer() {
+          return ['./images/6.jpg', './images/6.jpg', './images/6.jpg', './images/6.jpg', './images/6.jpg'];
       }
   }), _applyDecoratedDescriptor(_class.prototype, 'deleteNewsById', [_mobx.action], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'deleteNewsById'), _class.prototype)), _class);
   var userInfo = exports.userInfo = new UserInfo();
@@ -2816,6 +2824,14 @@ module.exports =
   
   var _Contact4 = _interopRequireDefault(_Contact3);
   
+  var _Frame = __webpack_require__(79);
+  
+  var _Frame2 = _interopRequireDefault(_Frame);
+  
+  var _Go = __webpack_require__(83);
+  
+  var _Go2 = _interopRequireDefault(_Go);
+  
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
   exports.default = {
@@ -2859,7 +2875,13 @@ module.exports =
     children: [{
       path: '/', // Same as /parent
       action: function action() {
-        return _react2.default.createElement(_Contact2.default, null);
+        console.log('in name router');
+        return _react2.default.createElement(
+          'div',
+          { className: _Contact4.default.up },
+          _react2.default.createElement(_Go2.default, null),
+          _react2.default.createElement(_Contact2.default, null)
+        );
       }
     }, {
       path: '/name',
@@ -2872,8 +2894,8 @@ module.exports =
                   console.log('in name router');
                   return _context2.abrupt('return', _react2.default.createElement(
                     'div',
-                    null,
-                    _react2.default.createElement('div', { className: _Contact4.default.open }),
+                    { className: _Contact4.default.up },
+                    _react2.default.createElement(_Frame2.default, null),
                     _react2.default.createElement(_Contact2.default, null)
                   ));
   
@@ -3083,24 +3105,25 @@ module.exports =
   
   
   // module
-  exports.push([module.id, "/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n:root {\r\n  /*\r\n   * Typography\r\n   * ======================================================================== */\r\n\r\n  /*\r\n   * Layout\r\n   * ======================================================================== */\r\n\r\n  /*\r\n   * Media queries breakpoints\r\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\r\n}\r\n\r\n.Contact_root_sD4 {\r\n  padding-left: 20px;\r\n  padding-right: 20px;\r\n}\r\n\r\n.Contact_container_PcA {\r\n  margin: 0 auto;\r\n  padding: 0 0 40px;\r\n  max-width: 1000px;\r\n}\r\n\r\n.Contact_open_1T3{\r\n\tdisplay:block;\r\n\twidth:100px;\r\n\theight:100px;\r\n\tbackground:red;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\tmargin-left:-50px;\r\n\tmargin-top:-50px;\r\n}\r\n\r\n.Contact_close_1j0{\r\n\tdisplay:none;\r\n\twidth:100px;\r\n\theight:100px;\r\n\tbackground:red;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\tmargin-left:-50px;\r\n\tmargin-top:-50px;\r\n}", "", {"version":3,"sources":["/./routes/contact/Contact.css","/./components/variables.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;ACPH;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;ADnBD;EACE,mBAAmB;EACnB,oBAAoB;CACrB;;AAED;EACE,eAAe;EACf,kBAAkB;EAClB,kBAAoC;CACrC;;AAED;CACC,cAAc;CACd,YAAY;CACZ,aAAa;CACb,eAAe;CACf,eAAe;CACf,SAAS;CACT,QAAQ;CACR,kBAAkB;CAClB,iBAAiB;CACjB;;AACD;CACC,aAAa;CACb,YAAY;CACZ,aAAa;CACb,eAAe;CACf,eAAe;CACf,SAAS;CACT,QAAQ;CACR,kBAAkB;CAClB,iBAAiB;CACjB","file":"Contact.css","sourcesContent":["/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n@import '../../components/variables.css';\r\n\r\n.root {\r\n  padding-left: 20px;\r\n  padding-right: 20px;\r\n}\r\n\r\n.container {\r\n  margin: 0 auto;\r\n  padding: 0 0 40px;\r\n  max-width: var(--max-content-width);\r\n}\r\n\r\n.open{\r\n\tdisplay:block;\r\n\twidth:100px;\r\n\theight:100px;\r\n\tbackground:red;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\tmargin-left:-50px;\r\n\tmargin-top:-50px;\r\n}\r\n.close{\r\n\tdisplay:none;\r\n\twidth:100px;\r\n\theight:100px;\r\n\tbackground:red;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\tmargin-left:-50px;\r\n\tmargin-top:-50px;\r\n}","/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n:root {\r\n  /*\r\n   * Typography\r\n   * ======================================================================== */\r\n\r\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\r\n\r\n  /*\r\n   * Layout\r\n   * ======================================================================== */\r\n\r\n  --max-content-width: 1000px;\r\n\r\n  /*\r\n   * Media queries breakpoints\r\n   * ======================================================================== */\r\n\r\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\r\n  --screen-sm-min: 768px;  /* Small screen / tablet */\r\n  --screen-md-min: 992px;  /* Medium screen / desktop */\r\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\r\n}\r\n"],"sourceRoot":"webpack://"}]);
+  exports.push([module.id, "/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n:root {\r\n  /*\r\n   * Typography\r\n   * ======================================================================== */\r\n\r\n  /*\r\n   * Layout\r\n   * ======================================================================== */\r\n\r\n  /*\r\n   * Media queries breakpoints\r\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\r\n}\r\n\r\n.Contact_root_sD4 {\r\n  padding-left: 20px;\r\n  padding-right: 20px;\r\n}\r\n\r\n.Contact_container_PcA {\r\n  margin: 0 auto;\r\n  padding: 0 0 40px;\r\n  max-width: 1000px;\r\n}\r\n\r\n.Contact_open_1T3{\r\n\tdisplay:block;\r\n\twidth:400px;\r\n\theight: 300px;;\r\n\tborder:1px solid #333333;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\t-webkit-transform:translate(-50%,-50%);\r\n\t    -ms-transform:translate(-50%,-50%);\r\n\t     -o-transform:translate(-50%,-50%);\r\n\t        transform:translate(-50%,-50%);\r\n\tz-index:1000;\r\n}\r\n\r\n.Contact_close_1j0{\r\n\tdisplay:none;\r\n\twidth:100px;\r\n\theight:100px;\r\n\tbackground:red;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\tmargin-left:-50px;\r\n\tmargin-top:-50px;\r\n}\r\n\r\n.Contact_up_2bm{\r\n\tz-index:10;\r\n}", "", {"version":3,"sources":["/./routes/contact/Contact.css","/./components/variables.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;ACPH;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;ADnBD;EACE,mBAAmB;EACnB,oBAAoB;CACrB;;AAED;EACE,eAAe;EACf,kBAAkB;EAClB,kBAAoC;CACrC;;AAED;CACC,cAAc;CACd,YAAY;CACZ,cAAc;CACd,yBAAyB;CACzB,eAAe;CACf,SAAS;CACT,QAAQ;CACR,uCAA+B;KAA/B,mCAA+B;MAA/B,kCAA+B;SAA/B,+BAA+B;CAC/B,aAAa;CACb;;AACD;CACC,aAAa;CACb,YAAY;CACZ,aAAa;CACb,eAAe;CACf,eAAe;CACf,SAAS;CACT,QAAQ;CACR,kBAAkB;CAClB,iBAAiB;CACjB;;AACD;CACC,WAAW;CACX","file":"Contact.css","sourcesContent":["/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n@import '../../components/variables.css';\r\n\r\n.root {\r\n  padding-left: 20px;\r\n  padding-right: 20px;\r\n}\r\n\r\n.container {\r\n  margin: 0 auto;\r\n  padding: 0 0 40px;\r\n  max-width: var(--max-content-width);\r\n}\r\n\r\n.open{\r\n\tdisplay:block;\r\n\twidth:400px;\r\n\theight: 300px;;\r\n\tborder:1px solid #333333;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\ttransform:translate(-50%,-50%);\r\n\tz-index:1000;\r\n}\r\n.close{\r\n\tdisplay:none;\r\n\twidth:100px;\r\n\theight:100px;\r\n\tbackground:red;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\tmargin-left:-50px;\r\n\tmargin-top:-50px;\r\n}\r\n.up{\r\n\tz-index:10;\r\n}","/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n:root {\r\n  /*\r\n   * Typography\r\n   * ======================================================================== */\r\n\r\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\r\n\r\n  /*\r\n   * Layout\r\n   * ======================================================================== */\r\n\r\n  --max-content-width: 1000px;\r\n\r\n  /*\r\n   * Media queries breakpoints\r\n   * ======================================================================== */\r\n\r\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\r\n  --screen-sm-min: 768px;  /* Small screen / tablet */\r\n  --screen-md-min: 992px;  /* Medium screen / desktop */\r\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\r\n}\r\n"],"sourceRoot":"webpack://"}]);
   
   // exports
   exports.locals = {
   	"root": "Contact_root_sD4",
   	"container": "Contact_container_PcA",
   	"open": "Contact_open_1T3",
-  	"close": "Contact_close_1j0"
+  	"close": "Contact_close_1j0",
+  	"up": "Contact_up_2bm"
   };
 
 /***/ },
 /* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
-  'use strict';
+  "use strict";
   
   Object.defineProperty(exports, "__esModule", {
-      value: true
+  	value: true
   });
   exports.testInstance = exports.test = undefined;
   
@@ -3123,78 +3146,457 @@ module.exports =
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
   function _initDefineProp(target, property, descriptor, context) {
-      if (!descriptor) return;
-      (0, _defineProperty2.default)(target, property, {
-          enumerable: descriptor.enumerable,
-          configurable: descriptor.configurable,
-          writable: descriptor.writable,
-          value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
-      });
+  	if (!descriptor) return;
+  	(0, _defineProperty2.default)(target, property, {
+  		enumerable: descriptor.enumerable,
+  		configurable: descriptor.configurable,
+  		writable: descriptor.writable,
+  		value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
+  	});
   }
   
   function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
-      var desc = {};
-      Object['ke' + 'ys'](descriptor).forEach(function (key) {
-          desc[key] = descriptor[key];
-      });
-      desc.enumerable = !!desc.enumerable;
-      desc.configurable = !!desc.configurable;
+  	var desc = {};
+  	Object['ke' + 'ys'](descriptor).forEach(function (key) {
+  		desc[key] = descriptor[key];
+  	});
+  	desc.enumerable = !!desc.enumerable;
+  	desc.configurable = !!desc.configurable;
   
-      if ('value' in desc || desc.initializer) {
-          desc.writable = true;
-      }
+  	if ('value' in desc || desc.initializer) {
+  		desc.writable = true;
+  	}
   
-      desc = decorators.slice().reverse().reduce(function (desc, decorator) {
-          return decorator(target, property, desc) || desc;
-      }, desc);
+  	desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+  		return decorator(target, property, desc) || desc;
+  	}, desc);
   
-      if (context && desc.initializer !== void 0) {
-          desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
-          desc.initializer = undefined;
-      }
+  	if (context && desc.initializer !== void 0) {
+  		desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+  		desc.initializer = undefined;
+  	}
   
-      if (desc.initializer === void 0) {
-          Object['define' + 'Property'](target, property, desc);
-          desc = null;
-      }
+  	if (desc.initializer === void 0) {
+  		Object['define' + 'Property'](target, property, desc);
+  		desc = null;
+  	}
   
-      return desc;
+  	return desc;
   }
   
   function _initializerWarningHelper(descriptor, context) {
-      throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
+  	throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
   }
   
   var test = exports.test = (_class = function () {
-      function test() {
-          (0, _classCallCheck3.default)(this, test);
+  	function test() {
+  		(0, _classCallCheck3.default)(this, test);
   
-          _initDefineProp(this, 'timerData', _descriptor, this);
-      }
+  		_initDefineProp(this, "timerData", _descriptor, this);
+  	}
   
-      (0, _createClass3.default)(test, [{
-          key: 'count',
-          value: function count() {
-              var _this = this;
+  	(0, _createClass3.default)(test, [{
+  		key: "count",
+  		value: function count() {
+  			var _this = this;
   
-              setInterval(function () {
-                  _this.timerData.secondsPassed++;
-              }, 1000);
-          }
-      }]);
-      return test;
-  }(), (_descriptor = _applyDecoratedDescriptor(_class.prototype, 'timerData', [_mobx.observable], {
-      enumerable: true,
-      initializer: function initializer() {
-          return {
-              secondsPassed: 0
-          };
-      }
+  			this.handler = setInterval(function () {
+  				_this.timerData.secondsPassed++;
+  
+  				_this.timerData.poleft = -(_this.timerData.secondsPassed * 400 % 2000);
+  			}, 3000);
+  		}
+  	}, {
+  		key: "clear",
+  		value: function clear() {
+  			window.clearInterval(this.handler);
+  		}
+  	}, {
+  		key: "updatePosition",
+  		value: function updatePosition(index) {
+  			console.log(index);
+  		}
+  	}, {
+  		key: "imgrun",
+  		value: function imgrun(e) {
+  			console.log(e.target.id);
+  			testInstance.timerData.secondsPassed = e.target.id;
+  			testInstance.timerData.poleft = -(testInstance.timerData.secondsPassed * 400 % 2000);
+  		}
+  	}]);
+  	return test;
+  }(), (_descriptor = _applyDecoratedDescriptor(_class.prototype, "timerData", [_mobx.observable], {
+  	enumerable: true,
+  	initializer: function initializer() {
+  		return {
+  			secondsPassed: 0,
+  			poleft: ""
+  		};
+  	}
   })), _class);
   var testInstance = exports.testInstance = new test();
 
 /***/ },
 /* 79 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _getPrototypeOf = __webpack_require__(31);
+  
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+  
+  var _classCallCheck2 = __webpack_require__(32);
+  
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+  
+  var _createClass2 = __webpack_require__(33);
+  
+  var _createClass3 = _interopRequireDefault(_createClass2);
+  
+  var _possibleConstructorReturn2 = __webpack_require__(34);
+  
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+  
+  var _inherits2 = __webpack_require__(35);
+  
+  var _inherits3 = _interopRequireDefault(_inherits2);
+  
+  var _class; /**
+               * React Starter Kit (https://www.reactstarterkit.com/)
+               *
+               * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
+               *
+               * This source code is licensed under the MIT license found in the
+               * LICENSE.txt file in the root directory of this source tree.
+               */
+  
+  var _react = __webpack_require__(15);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _withStyles = __webpack_require__(19);
+  
+  var _withStyles2 = _interopRequireDefault(_withStyles);
+  
+  var _Frame = __webpack_require__(80);
+  
+  var _Frame2 = _interopRequireDefault(_Frame);
+  
+  var _mobxReact = __webpack_require__(73);
+  
+  var _testModel = __webpack_require__(78);
+  
+  var _UserInfo = __webpack_require__(65);
+  
+  var _history = __webpack_require__(44);
+  
+  var _history2 = _interopRequireDefault(_history);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var Frame = (0, _mobxReact.observer)(_class = function (_React$Component) {
+    (0, _inherits3.default)(Frame, _React$Component);
+  
+    function Frame() {
+      (0, _classCallCheck3.default)(this, Frame);
+      return (0, _possibleConstructorReturn3.default)(this, (Frame.__proto__ || (0, _getPrototypeOf2.default)(Frame)).apply(this, arguments));
+    }
+  
+    (0, _createClass3.default)(Frame, [{
+      key: 'render',
+      value: function render() {
+        return _react2.default.createElement(
+          'div',
+          { className: _Frame2.default.page },
+          _react2.default.createElement(
+            'div',
+            { className: _Frame2.default.open },
+            _react2.default.createElement(
+              'div',
+              { className: _Frame2.default.hide, onClick: this.jump },
+              'X'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: _Frame2.default.title },
+              ' title '
+            ),
+            _react2.default.createElement('input', { className: _Frame2.default.name, type: 'text', placeholder: '用户ID/注册邮箱' }),
+            _react2.default.createElement('input', { className: _Frame2.default.password, type: 'password', placeholder: '密码' }),
+            _react2.default.createElement(
+              'p',
+              { className: _Frame2.default.remember },
+              _react2.default.createElement('input', { type: 'checkbox' }),
+              '记住我'
+            ),
+            _react2.default.createElement('input', { type: 'button', value: '登录', className: _Frame2.default.register }),
+            _react2.default.createElement(
+              'div',
+              { className: _Frame2.default.pw_lg },
+              _react2.default.createElement(
+                'a',
+                { href: 'javascript:;' },
+                '忘记密码'
+              ),
+              '|',
+              _react2.default.createElement(
+                'a',
+                { href: 'javascript:;' },
+                '注册'
+              )
+            )
+          )
+        );
+      }
+    }, {
+      key: 'jump',
+      value: function jump() {
+        _history2.default.goBack(-1);
+      }
+    }]);
+    return Frame;
+  }(_react2.default.Component)) || _class;
+  
+  exports.default = (0, _withStyles2.default)(_Frame2.default)(Frame);
+
+/***/ },
+/* 80 */
+/***/ function(module, exports, __webpack_require__) {
+
+  
+      var content = __webpack_require__(81);
+      var insertCss = __webpack_require__(23);
+  
+      if (typeof content === 'string') {
+        content = [[module.id, content, '']];
+      }
+  
+      module.exports = content.locals || {};
+      module.exports._getCss = function() { return content.toString(); };
+      module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+      // Hot Module Replacement
+      // https://webpack.github.io/docs/hot-module-replacement
+      // Only activated in browser context
+      if (false) {
+        var removeCss = function() {};
+        module.hot.accept("!!./../../../node_modules/.0.23.1@css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]_[local]_[hash:base64:3]\",\"minimize\":false}!./../../../node_modules/.0.9.1@postcss-loader/index.js?pack=default!./Frame.css", function() {
+          content = require("!!./../../../node_modules/.0.23.1@css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]_[local]_[hash:base64:3]\",\"minimize\":false}!./../../../node_modules/.0.9.1@postcss-loader/index.js?pack=default!./Frame.css");
+  
+          if (typeof content === 'string') {
+            content = [[module.id, content, '']];
+          }
+  
+          removeCss = insertCss(content, { replace: true });
+        });
+        module.hot.dispose(function() { removeCss(); });
+      }
+    
+
+/***/ },
+/* 81 */
+/***/ function(module, exports, __webpack_require__) {
+
+  exports = module.exports = __webpack_require__(22)();
+  // imports
+  
+  
+  // module
+  exports.push([module.id, "/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n:root {\r\n  /*\r\n   * Typography\r\n   * ======================================================================== */\r\n\r\n  /*\r\n   * Layout\r\n   * ======================================================================== */\r\n\r\n  /*\r\n   * Media queries breakpoints\r\n   * ======================================================================== */  /* Extra small screen / phone */  /* Small screen / tablet */  /* Medium screen / desktop */ /* Large screen / wide desktop */\r\n}\r\n\r\n.Frame_page_25Y{\r\n\twidth:100%;\r\n\theight:100%;\r\n\tposition:absolute;\r\n\ttop:0;\r\n\tleft:0;\r\n}\r\n\r\n.Frame_open_1cd{\r\n\tdisplay:block;\r\n\twidth:400px;\r\n\theight: 300px;;\r\n\tborder:1px solid red;\r\n\tbackground:#ffffff;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\t-webkit-transform:translate(-50%,-50%);\r\n\t    -ms-transform:translate(-50%,-50%);\r\n\t     -o-transform:translate(-50%,-50%);\r\n\t        transform:translate(-50%,-50%);\r\n\tz-index:1000;\r\n\topacity:1;\r\n}\r\n\r\n.Frame_title_3FJ{\r\n\twidth:100%;\r\n\toverflow:hidden;\r\n\tfont-size:16px;\r\n\ttext-align:center;\r\n\tline-height:30px;\r\n\tmargin-top:30px;\r\n}\r\n\r\n.Frame_hide_pXC{\r\n\twidth:20px;\r\n\theight:20px;\r\n\tposition:absolute;\r\n\ttop:10px;\r\n\tright:10px;\r\n\ttext-align:center;\r\n\tline-height:20px;\r\n}\r\n\r\n.Frame_name__ME{\r\n\twidth: 210px;\r\n    height: 30px;\r\n    border-radius: 3px;\r\n    border: 1px #e3e3e3 solid;\r\n    margin-bottom: 10px;\r\n    background: url(" + __webpack_require__(82) + ") #fff -8px -155px no-repeat;\r\n    padding-left: 30px;\r\n    margin:0 auto;\r\n    display:block;\r\n    margin-top:10px;\r\n}\r\n\r\n.Frame_password_O9J{\r\n\twidth: 210px;\r\n    height: 30px;\r\n    border-image-source: initial;\r\n    border-image-slice: initial;\r\n    border-image-width: initial;\r\n    border-image-outset: initial;\r\n    border-image-repeat: initial;\r\n    padding-left: 30px;\r\n    display: block;\r\n    border-radius: 3px;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-color: rgb(227, 227, 227);\r\n    background: url(" + __webpack_require__(82) + ") #fff -8px -187px no-repeat;\r\n    margin: 10px auto 0px;\r\n}\r\n\r\n.Frame_remember_3SK{\r\n\twidth:240px;\r\n\tfont-size: 12px;\r\n    text-align: left;\r\n    color: #999;\r\n    margin-bottom: 20px;\r\n    vertical-align: middle;\r\n    line-height: 13px;\r\n    margin: 10px auto 0px;\r\n}\r\n\r\n.Frame_remember_3SK input{\r\n\tvertical-align: middle;\r\n}\r\n\r\n.Frame_register_f7J{\r\n\ttext-align: left;\r\n    padding: 8px 22px;\r\n    cursor: pointer;\r\n    border: 1px solid #ef5f06;\r\n    background-color: #ff6c1e;\r\n    margin-top: 20px;\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    color: #FFF;\r\n    border-radius: 3px;\r\n    margin-left: 78px;\r\n    float:left;\r\n}\r\n\r\n.Frame_pw_lg_3vx{\r\n\tfloat: right;\r\n    font-size: 12px;\r\n    color: #999;\r\n    margin-top: 30px;\r\n    margin-right: 80px;\r\n}", "", {"version":3,"sources":["/./routes/lib/Frame.css","/./components/variables.css"],"names":[],"mappings":"AAAA;;;;;;;GAOG;;ACPH;;;;;;;GAOG;;AAEH;EACE;;gFAE8E;;EAI9E;;gFAE8E;;EAI9E;;gFAE8E,EAErD,gCAAgC,EAChC,2BAA2B,EAC3B,6BAA6B,CAC7B,iCAAiC;CAC3D;;ADnBD;CACC,WAAW;CACX,YAAY;CACZ,kBAAkB;CAClB,MAAM;CACN,OAAO;CACP;;AACD;CACC,cAAc;CACd,YAAY;CACZ,cAAc;CACd,qBAAqB;CACrB,mBAAmB;CACnB,eAAe;CACf,SAAS;CACT,QAAQ;CACR,uCAA+B;KAA/B,mCAA+B;MAA/B,kCAA+B;SAA/B,+BAA+B;CAC/B,aAAa;CACb,UAAU;CACV;;AACD;CACC,WAAW;CACX,gBAAgB;CAChB,eAAe;CACf,kBAAkB;CAClB,iBAAiB;CACjB,gBAAgB;CAChB;;AACD;CACC,WAAW;CACX,YAAY;CACZ,kBAAkB;CAClB,SAAS;CACT,WAAW;CACX,kBAAkB;CAClB,iBAAiB;CACjB;;AACD;CACC,aAAa;IACV,aAAa;IACb,mBAAmB;IACnB,0BAA0B;IAC1B,oBAAoB;IACpB,qEAA+D;IAC/D,mBAAmB;IACnB,cAAc;IACd,cAAc;IACd,gBAAgB;CACnB;;AACD;CACC,aAAa;IACV,aAAa;IACb,6BAA6B;IAC7B,4BAA4B;IAC5B,4BAA4B;IAC5B,6BAA6B;IAC7B,6BAA6B;IAC7B,mBAAmB;IACnB,eAAe;IACf,mBAAmB;IACnB,kBAAkB;IAClB,oBAAoB;IACpB,iCAAiC;IACjC,qEAA+D;IAC/D,sBAAsB;CACzB;;AACD;CACC,YAAY;CACZ,gBAAgB;IACb,iBAAiB;IACjB,YAAY;IACZ,oBAAoB;IACpB,uBAAuB;IACvB,kBAAkB;IAClB,sBAAsB;CACzB;;AACD;CACC,uBAAuB;CACvB;;AACD;CACC,iBAAiB;IACd,kBAAkB;IAClB,gBAAgB;IAChB,0BAA0B;IAC1B,0BAA0B;IAC1B,iBAAiB;IACjB,gBAAgB;IAChB,kBAAkB;IAClB,YAAY;IACZ,mBAAmB;IACnB,kBAAkB;IAClB,WAAW;CACd;;AACD;CACC,aAAa;IACV,gBAAgB;IAChB,YAAY;IACZ,iBAAiB;IACjB,mBAAmB;CACtB","file":"Frame.css","sourcesContent":["/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n@import '../../components/variables.css';\r\n\r\n.page{\r\n\twidth:100%;\r\n\theight:100%;\r\n\tposition:absolute;\r\n\ttop:0;\r\n\tleft:0;\r\n}\r\n.open{\r\n\tdisplay:block;\r\n\twidth:400px;\r\n\theight: 300px;;\r\n\tborder:1px solid red;\r\n\tbackground:#ffffff;\r\n\tposition:fixed;\r\n\tleft:50%;\r\n\ttop:50%;\r\n\ttransform:translate(-50%,-50%);\r\n\tz-index:1000;\r\n\topacity:1;\r\n}\r\n.title{\r\n\twidth:100%;\r\n\toverflow:hidden;\r\n\tfont-size:16px;\r\n\ttext-align:center;\r\n\tline-height:30px;\r\n\tmargin-top:30px;\r\n}\r\n.hide{\r\n\twidth:20px;\r\n\theight:20px;\r\n\tposition:absolute;\r\n\ttop:10px;\r\n\tright:10px;\r\n\ttext-align:center;\r\n\tline-height:20px;\r\n}\r\n.name{\r\n\twidth: 210px;\r\n    height: 30px;\r\n    border-radius: 3px;\r\n    border: 1px #e3e3e3 solid;\r\n    margin-bottom: 10px;\r\n    background: url(./images/icons.png) #fff -8px -155px no-repeat;\r\n    padding-left: 30px;\r\n    margin:0 auto;\r\n    display:block;\r\n    margin-top:10px;\r\n}\r\n.password{\r\n\twidth: 210px;\r\n    height: 30px;\r\n    border-image-source: initial;\r\n    border-image-slice: initial;\r\n    border-image-width: initial;\r\n    border-image-outset: initial;\r\n    border-image-repeat: initial;\r\n    padding-left: 30px;\r\n    display: block;\r\n    border-radius: 3px;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-color: rgb(227, 227, 227);\r\n    background: url(./images/icons.png) #fff -8px -187px no-repeat;\r\n    margin: 10px auto 0px;\r\n}\r\n.remember{\r\n\twidth:240px;\r\n\tfont-size: 12px;\r\n    text-align: left;\r\n    color: #999;\r\n    margin-bottom: 20px;\r\n    vertical-align: middle;\r\n    line-height: 13px;\r\n    margin: 10px auto 0px;\r\n}\r\n.remember input{\r\n\tvertical-align: middle;\r\n}\r\n.register{\r\n\ttext-align: left;\r\n    padding: 8px 22px;\r\n    cursor: pointer;\r\n    border: 1px solid #ef5f06;\r\n    background-color: #ff6c1e;\r\n    margin-top: 20px;\r\n    font-size: 14px;\r\n    font-weight: bold;\r\n    color: #FFF;\r\n    border-radius: 3px;\r\n    margin-left: 78px;\r\n    float:left;\r\n}\r\n.pw_lg{\r\n\tfloat: right;\r\n    font-size: 12px;\r\n    color: #999;\r\n    margin-top: 30px;\r\n    margin-right: 80px;\r\n}","/**\r\n * React Starter Kit (https://www.reactstarterkit.com/)\r\n *\r\n * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.\r\n *\r\n * This source code is licensed under the MIT license found in the\r\n * LICENSE.txt file in the root directory of this source tree.\r\n */\r\n\r\n:root {\r\n  /*\r\n   * Typography\r\n   * ======================================================================== */\r\n\r\n  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;\r\n\r\n  /*\r\n   * Layout\r\n   * ======================================================================== */\r\n\r\n  --max-content-width: 1000px;\r\n\r\n  /*\r\n   * Media queries breakpoints\r\n   * ======================================================================== */\r\n\r\n  --screen-xs-min: 480px;  /* Extra small screen / phone */\r\n  --screen-sm-min: 768px;  /* Small screen / tablet */\r\n  --screen-md-min: 992px;  /* Medium screen / desktop */\r\n  --screen-lg-min: 1200px; /* Large screen / wide desktop */\r\n}\r\n"],"sourceRoot":"webpack://"}]);
+  
+  // exports
+  exports.locals = {
+  	"page": "Frame_page_25Y",
+  	"open": "Frame_open_1cd",
+  	"title": "Frame_title_3FJ",
+  	"hide": "Frame_hide_pXC",
+  	"name": "Frame_name__ME",
+  	"password": "Frame_password_O9J",
+  	"remember": "Frame_remember_3SK",
+  	"register": "Frame_register_f7J",
+  	"pw_lg": "Frame_pw_lg_3vx"
+  };
+
+/***/ },
+/* 82 */
+/***/ function(module, exports) {
+
+  module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAFACAYAAAD+oi/PAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAADqRJREFUeNrs3X10U2WewPHvTZombRoSXlpKpaWFApIBLAQQpUiZ5ay4CiOLHkeRlXFBZHV2gD1nz7qDOiPjyMycXfTsHB1QFLbgMEdGQbTiuEgZXnaUpq0FyssUWlr6ikCgpU2al2f/yC2G2ArYG7xhn+ece3Jzc29yP/d5fs/z5Lk3N4oQAi2S2+0uUWcn9LBKCYDL5ZpADJJBw/eaELnD3SG+AakrSE+YmCNiAYnG3BBErCDROx5zRCwhJT3MxxUksjhNuFEYQwwR11Kb6RLyTYEdc4yiVYP4XScDN0mSEAmREAmREAmREAmREAmREAmREAkJpwSt3mjx4sVdX/6VHlYRAGvWrFH0niNK5A53h/gGpO6KVneYmCNiFSORmBuCiGWwKz3Mxx1E9DAfV5DI4qTcKIwhhohrqc10CfmmwI45Rg5iS4iESIiESIiESIiESIiESIiESIiE6DP1ahB77dq1l+cPHjzIyZMnaW9vf/zIkSOPnjt3bmQgEDBbrdaWIUOG7HW5XK/m5uaWDxw48PI2TzzxhG5z5PXi4uJ1zc3N0/1+f4YQon9bW9uow4cPL3r77bf3Ag/EQ9F6uqioaCHAihUrePzxx7FarWzYsIG8vDwCgYD1pZdeWgcM1jMkpbCw8BkAh8PBsuXL6fD6mHrXNCZOnMSjj84HoKOjo09RUdG8oqIiioqK9BMj1adOdc06L1y4kAHg8Vyi4nAVWZmZHKooo3/qQNwVxy5vc7iycupTS5b8SlfB3lRb2zV7B4DVojBvMiTufojFgxXmzmlE+ehuChKOUZVj5EB1kNqGhknAIKBRN0VrzoMPkpqdTU5FxX1zTCaSk2H00AQswUZy+rQw0WnG4Kkgs7+f3EwDdsXA3/v9qc2VlSObKyv1kyNduVF/stq1ymRmjy+J373p5ZemINlZAcxmqGkO0XoWvm8wscZi4lQoRLPNlnVbXp62ZUsI8a2nbdu25Tj69TuTAOK9GTNE/aAMcWZAmqiw9RXbzX3EZpNN7DCniCOJFuG29xWvTZ4srCAcAwbUbNiwwdabz46eerXxlClT3gTErU6nqL54Ubz+vdFir9Um9g0fIcqG5oryrGyxf/QYsXP+P4hju3cLj88nnGPHCkDMnz9/gW4gZrO5ERCzZs8WF/x+8X5WtjgOovrll0VTc7OoP31afNnaKlra20Xh5s3ixIkTYvny5QIQNpttg5aQXsWI3++3TJgwYUtzU9MD1oQEOu+YTLPnPGPSB2FPS7u8ntfrxTV2LAMHDiQYDJ632WztRqPRpJtgX7Lkybtnz/5B6TMrfpbwySfF98/Z/HsaGhqwRvSnACwWC6NGjeJUfYsIYfyvFSt++o7ZbDHpqWX//MMPtwfm/V3eutdeWHTxQOkRBmdkkGA0fm3F+pZWNv1mUac1dKbUbg4cAsp0kyNGowHglnvMb29/ct4l/vjmdL6sWIxz0r3YUoeQbLUR8LVRV/ln6ot/xdLcEvPRJmXrAVb+jYW2T3UDueeeewHOHXUf+09xoXzm3w5vTTtx9AVl265XGw94pxR6Q5aTmUlnZkzpV3Hb8P5eR8X5jPbPz/b5bHBerratIfIcooRIiIRIiIRIiIRIiIRIiIRIiIRIiF5TrwYfTo9w9vyiAISC/V8qARYBLwBG9eA9C7xmWyL0Aekh3QFMAcqB/1GSAdgoOjiGwAvcBbwK+IA3tfrQXo2iROXIUGAVMEc9QGcIKSOB8wQU7M9UbkaIfASLVOhjtiUiU28xMgXYCTwYkcudGMQEYBnwysXfjvggeNbya8XEfwAfAWbdxIiaxgHvIkSa8PoQ/s6u5akoyvuKxWJREhMJekxNSqJ4RDFTIYL0IUSSniAOFKVQeL1pBIOYb7uNPlOnYM7JwdfRntj+xUG8e/cRqK9HsfTxd/wp/Zj/uO2H9p8cGavYgus1jczenJOoGz7q2drMHHHadbvo2P6BEEKIsqNHxQfFxaL+wgUhhBCB+nrx5ZKnxKlbhvhrc5wHarNG59cNc3JxLejmRE9dzoiDdc4xovOLChEQQix56qmuH4iJzMxMsau4WAghRKi9XTTOuFvUZg0VdcOcdXXDnP3rhjk1hfQq2EMd7QOTCgowjR3DO3/4A5sKC5k7dy6zZs2irq6Ol1evDleNSUmYhg1DdHaCQQzEIOwYtB1z7l2tpSinQu3tQPjigYcffpjCwkKqq6sBGD58OADB5hZ8pWUYLBaAPwG1uuqiGJKTn/Pu3uPrePc9Fi5ezIVQkPwZM/hrXR1z5j3Cv69cSaC6hrP/9DSBhgYwmQ4DPwYCWkN61yDm3ooQYgaB4Iv22fdNCn5/Ou6zX2Kz28kbMAD/vv1c/ON7BFpa2gwpKZsR4nmgoWv7wccrdQVBMRjMoUuXphsTEqZb7PZbhRBWX2trKOjrbFGSk0oVk2kHUEnUZ+kGIrvxEiIhEiIhEiIhEiIhEiIhEiIhEiIhMUu9Gvu9b2XLNODXwKTr3PRz4F8/eDZtty4gwGYg/VtsN0nddpBeilb6d7St5jny9b3ra2Tm+CTaOkIAVDUGyHea2bK/nabzwfgI9vS+Rl5e2I+9lV627G8nJcnA0/faSLEYyB2UENNg1xQyc3wS5Sc7qWoMD+3uKO0gva+R9Z+2sbfSFz+QruJ0OYccRtq84mvLdVf9Rqe9R3zkOy08cGcybV5BXk4iW/Zdos0r4gsSfeTXf9oW0wCPHUQ98g9MsdJ0PkheTiJVjX52lHbEPFc0hTx9r43y6k62bLwEQO4gEzPHJ/GLRy0sfeNcfAR7ikUh32mhqtEfDnCvoKrRT5MneEOKV4KWxWrFxvPMHJ9EuiP8G6uUJANVjX7W72yLrxipagzw2w9b47IbX/8dbas5ZCHQ9C22a1K31SzJc4gSIiESIiESIiESIiESIiESIiESIiESEtOkybiW2+2OXjQNeEOdXwhccdLT5XLpExKVjMB/A1nq802Ef0jWGW9F67kIBMAtwE/jMUZ2dLPsk3iEfM6Vw6FNgDseIUFgacTzFUBHXNRa3aQtfDUmvC5e2xE7MBtIVaeH0Pgqh1hDUoG3gLPANrUaNhK+5qRRXZajd8g04DCwQN357tJsoALI1zPkXTVHrpZS1AZSt5B+17FuViwg8kSPhEiIhEiIhEiIhEiIhEiIhEiIhEiIPlNMRhrdbvcaIPJvw9a6XK7FMZVoeY8rIQQlJSVrSkpKRNQyUVJSskbrz9LsRmE9QMT1LNfFjcJksMcg3TQDdAka11ZXPSoul0uRRUtCJERCZPUri5aESIiESIiESIiESIiESIiESIiE3GSQXo00KsrXBg0F4AFeAYqBbHWqUafHCF9Su5Xwf/mg2ZhBr85JXJkKVMi1TLu0+PxYnVYov451swGHXmNk9XVCFmgJ6dW4VlSMnAccdpuVWdMmk5WRxh73IQDsKVbGjsyhtqGF7bv/woXWS6gxNF2rGNHytILDbrPyv5teYVjeZEK+doKer+7GY3SkYzAn496zkzvn/UTX1a9n7IihZA/LpXTLdsq377zixZNlx/h45UuMc01gqmuMriE1ACIYvrVhUr++AHRcDN9by2ROJDk1DRH0X85BvcZItqNPSlnRay86xk26A4J+2upPcXT3Z9w67Xas6RkYku2cPOjGOXuhh/A/ktVoFSNaQQqAPGBrWj/H6gfvvuv+qa7R2FNSOHe6kX6Dw/de3VN6kDe2fLS15Zzn513Vtd4aRAdQFlUFV0c1gue1/nzNLhjopm0QjyxZWLb8xed29dCi58UDBOB+tfvRBSmL6JIItQjGBKL1RTVb1SmyAxnX3fiCiOIWWdU64g3yGLBe3fFlKmg98INYQeQ5RAmREAmREAmREAmREAmREAmREAmREH2mXg8HKfNW9epLv9j0b4ouIAAEg6AYwB8AgwIJxms8CorOipaiYDQa+F5OOhkD7BAS4Z282qS7GPF28tDtI/li1T/i/uUChqTaIRCMw2AXkJxowmg0MMCWhDnB+NWwdVcKCYjhGJo2MWJJZOO+w3T4/BxvOsvxhrPhQxQMhjGhEElWC52BIEGvHywmnUL8ASaOHMwP80dzyefjydc/YsXcqdyem8HuQzUYjQoP3Tkaz6UOfvP+fn6/txJMJlD0BgmGuKVvCveNz6UzEODH6z5m4rAM8kdmkj8yM2JFBxv/eQ4nW1r57NhpMCfoLEaAQCj8Z1ztPj8C8PrDJ0VrWjxMe3YDM17YSLOnFYNi4OE7R2leGSTEujbZf6yOP5f9FQwGSqubuWecjVS7VdNidUMgCUYDmE3hBlPd+VBI+9pL+76WAAWl2wOuxPCAaQYxGcNvZUtKxGgAe7IZgKRE0+X2JNlsUpdpXxASNCo/HGs8x+8+LuFSp58Of4DNew9RdqKBAycawWgEg8I7+49wtO4Mf6lquPb+2LX2knp7xkqZt0ogRLjl9vnDfaikRPB1QlCEd1jNifCyUBhmMUFI6Kz3qyhgVEAtTgCYEyPiRj1YiaYruyx6yhH5DVFCJERCJERCbobU65bd6artbnG2+lhzte0r3Vm6zZEFhK9nrCZ8RV34Oy68p07Z+h1FuTKtjprfSvhSwLyI3BoXDzHiiCpiBVx5UWaeXoPdQfi/FJaqzz0Rr5V3s36NXiGrI6ZdhC/986jTMsK/SogELVNzqUBvMbIgYr5A3dG+UeuMU1+rIfy3BV2I9cCPdPF9xOmqjX6D6WouFBC+GPOCGvDlXw1PXJFyKt1ZNXrIkeKII+xRn/8MeD5inecJ/zis/CqVw3eaI46IQF+vot7qZlWPmlu7InbeU+nO6quXGPGoOdAVL29FttoRLb8jojLoahS36rFBfIur/wDModZuP9ISoWWDuDoSUenOuqIP1TWvPnZ1VxboEbI0ujj10JkkqgK4KbrxmnYetYqRrV09Xaer9nJR6sqVrmVRubRVj5Cu1vn+CEBxRL8r2+mqzYtqe36uJUSONEqIhEiIhEiIhEiIhEjI/x/I/w0AkrLopx5xWl0AAAAASUVORK5CYII="
+
+/***/ },
+/* 83 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _getPrototypeOf = __webpack_require__(31);
+  
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+  
+  var _classCallCheck2 = __webpack_require__(32);
+  
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+  
+  var _createClass2 = __webpack_require__(33);
+  
+  var _createClass3 = _interopRequireDefault(_createClass2);
+  
+  var _possibleConstructorReturn2 = __webpack_require__(34);
+  
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+  
+  var _inherits2 = __webpack_require__(35);
+  
+  var _inherits3 = _interopRequireDefault(_inherits2);
+  
+  var _class;
+  
+  var _react = __webpack_require__(15);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _withStyles = __webpack_require__(19);
+  
+  var _withStyles2 = _interopRequireDefault(_withStyles);
+  
+  var _Go = __webpack_require__(84);
+  
+  var _Go2 = _interopRequireDefault(_Go);
+  
+  var _mobxReact = __webpack_require__(73);
+  
+  var _testModel = __webpack_require__(78);
+  
+  var _UserInfo = __webpack_require__(65);
+  
+  var _history = __webpack_require__(44);
+  
+  var _history2 = _interopRequireDefault(_history);
+  
+  var _ = __webpack_require__(86);
+  
+  var _2 = _interopRequireDefault(_);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var Go = (0, _mobxReact.observer)(_class = function (_React$Component) {
+    (0, _inherits3.default)(Go, _React$Component);
+  
+    function Go() {
+      (0, _classCallCheck3.default)(this, Go);
+      return (0, _possibleConstructorReturn3.default)(this, (Go.__proto__ || (0, _getPrototypeOf2.default)(Go)).apply(this, arguments));
+    }
+  
+    (0, _createClass3.default)(Go, [{
+      key: 'componentWillUnMount',
+      value: function componentWillUnMount() {
+        _testModel.testInstance.clear();
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var style = {
+          left: _testModel.testInstance.timerData.poleft
+        };
+        return _react2.default.createElement(
+          'div',
+          { className: _Go2.default.wrap },
+          _react2.default.createElement(
+            'ul',
+            { className: _Go2.default.list, style: style },
+            _UserInfo.userInfo.imgrun.map(function (item, index) {
+              return _react2.default.createElement(
+                'li',
+                { key: index },
+                _react2.default.createElement('img', { src: _2.default })
+              );
+            })
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: _Go2.default.btn },
+            _UserInfo.userInfo.imgrun.map(function (item, index) {
+              return _react2.default.createElement('li', { id: index, onClick: _testModel.testInstance.imgrun, key: index, className: _testModel.testInstance.timerData.secondsPassed % 5 == index ? _Go2.default.active : "" });
+            })
+          )
+        );
+      }
+    }]);
+    return Go;
+  }(_react2.default.Component)) || _class;
+  
+  exports.default = (0, _withStyles2.default)(_Go2.default)(Go);
+
+/***/ },
+/* 84 */
+/***/ function(module, exports, __webpack_require__) {
+
+  
+      var content = __webpack_require__(85);
+      var insertCss = __webpack_require__(23);
+  
+      if (typeof content === 'string') {
+        content = [[module.id, content, '']];
+      }
+  
+      module.exports = content.locals || {};
+      module.exports._getCss = function() { return content.toString(); };
+      module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+      // Hot Module Replacement
+      // https://webpack.github.io/docs/hot-module-replacement
+      // Only activated in browser context
+      if (false) {
+        var removeCss = function() {};
+        module.hot.accept("!!./../../../node_modules/.0.23.1@css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]_[local]_[hash:base64:3]\",\"minimize\":false}!./../../../node_modules/.0.9.1@postcss-loader/index.js?pack=default!./Go.css", function() {
+          content = require("!!./../../../node_modules/.0.23.1@css-loader/index.js?{\"sourceMap\":true,\"modules\":true,\"localIdentName\":\"[name]_[local]_[hash:base64:3]\",\"minimize\":false}!./../../../node_modules/.0.9.1@postcss-loader/index.js?pack=default!./Go.css");
+  
+          if (typeof content === 'string') {
+            content = [[module.id, content, '']];
+          }
+  
+          removeCss = insertCss(content, { replace: true });
+        });
+        module.hot.dispose(function() { removeCss(); });
+      }
+    
+
+/***/ },
+/* 85 */
+/***/ function(module, exports, __webpack_require__) {
+
+  exports = module.exports = __webpack_require__(22)();
+  // imports
+  
+  
+  // module
+  exports.push([module.id, "\r\n\r\n.Go_wrap_udZ { width: 400px; height: 320px; overflow: hidden; border: 1px solid #eee; margin: 0 auto; position: relative}\r\n.Go_list_h7V{position: absolute; top: 0; left: 0; height: 320px; width: 2000px;padding-left:0;margin:0;-webkit-transition: 3s;-o-transition: 3s;transition:3s;}\r\n.Go_list_h7V li{list-style: none;float: left;width: 400px;}\r\n.Go_list_h7V li img{vertical-align: top}\r\n.Go_btn_29V {position: absolute; overflow:hidden; bottom: 0; left: 125px;padding:0; width: 150px; }\r\n.Go_btn_29V li { margin: 10px; cursor: pointer; background:blue;float:left;width:10px;height:10px;list-style: none;}\r\n.Go_btn_29V .Go_active_ECo { background:red;}\r\n\r\n\r\n\r\n\r\n\r\n\r\n", "", {"version":3,"sources":["/./routes/go/Go.css"],"names":[],"mappings":";;AAEA,eAAQ,aAAa,CAAC,cAAc,CAAC,iBAAiB,CAAC,uBAAuB,CAAC,eAAe,CAAC,kBAAkB,CAAC;AAClH,aAAM,mBAAmB,CAAC,OAAO,CAAC,QAAQ,CAAC,cAAc,CAAC,cAAc,eAAe,SAAS,uBAAA,kBAAA,cAAc,CAAC;AAC/G,gBAAS,iBAAiB,YAAY,aAAa,CAAC;AACpD,oBAAa,mBAAmB,CAAC;AAEjC,aAAM,mBAAmB,CAAC,gBAAgB,CAAC,UAAU,CAAC,YAAY,UAAU,CAAC,aAAa,EAAE;AAC5F,iBAAU,aAAa,CAAC,gBAAgB,CAAC,gBAAgB,WAAW,WAAW,YAAY,iBAAiB,CAAC;AAE7G,6BAAe,eAAe,CAAC","file":"Go.css","sourcesContent":["\r\n\r\n.wrap { width: 400px; height: 320px; overflow: hidden; border: 1px solid #eee; margin: 0 auto; position: relative}\r\n.list{position: absolute; top: 0; left: 0; height: 320px; width: 2000px;padding-left:0;margin:0;transition:3s;}\r\n.list li{list-style: none;float: left;width: 400px;}\r\n.list li img{vertical-align: top}\r\n\r\n.btn {position: absolute; overflow:hidden; bottom: 0; left: 125px;padding:0; width: 150px; }\r\n.btn li { margin: 10px; cursor: pointer; background:blue;float:left;width:10px;height:10px;list-style: none;}\r\n\r\n.btn .active { background:red;}\r\n\r\n\r\n\r\n\r\n\r\n\r\n"],"sourceRoot":"webpack://"}]);
+  
+  // exports
+  exports.locals = {
+  	"wrap": "Go_wrap_udZ",
+  	"list": "Go_list_h7V",
+  	"btn": "Go_btn_29V",
+  	"active": "Go_active_ECo"
+  };
+
+/***/ },
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+  module.exports = __webpack_require__.p + "routes/go/images/6.jpg?d48a3c86fee1606b57d768a0442fe07c";
+
+/***/ },
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3239,7 +3641,7 @@ module.exports =
                 _context.next = 2;
                 return new _promise2.default(function (resolve) {
                   !/* require.ensure */(function (require) {
-                    return resolve(__webpack_require__(80).default);
+                    return resolve(__webpack_require__(88).default);
                   }(__webpack_require__));
                 });
   
@@ -3265,7 +3667,7 @@ module.exports =
       */
 
 /***/ },
-/* 80 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3282,7 +3684,7 @@ module.exports =
   
   var _withStyles2 = _interopRequireDefault(_withStyles);
   
-  var _Login = __webpack_require__(81);
+  var _Login = __webpack_require__(89);
   
   var _Login2 = _interopRequireDefault(_Login);
   
@@ -3451,11 +3853,11 @@ module.exports =
   exports.default = (0, _withStyles2.default)(_Login2.default)(Login);
 
 /***/ },
-/* 81 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
   
-      var content = __webpack_require__(82);
+      var content = __webpack_require__(90);
       var insertCss = __webpack_require__(23);
   
       if (typeof content === 'string') {
@@ -3485,7 +3887,7 @@ module.exports =
     
 
 /***/ },
-/* 82 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(22)();
@@ -3512,7 +3914,7 @@ module.exports =
   };
 
 /***/ },
-/* 83 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3557,7 +3959,7 @@ module.exports =
                 _context.next = 2;
                 return new _promise2.default(function (resolve) {
                   !/* require.ensure */(function (require) {
-                    return resolve(__webpack_require__(84).default);
+                    return resolve(__webpack_require__(92).default);
                   }(__webpack_require__));
                 });
   
@@ -3583,7 +3985,7 @@ module.exports =
       */
 
 /***/ },
-/* 84 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3600,7 +4002,7 @@ module.exports =
   
   var _withStyles2 = _interopRequireDefault(_withStyles);
   
-  var _Register = __webpack_require__(85);
+  var _Register = __webpack_require__(93);
   
   var _Register2 = _interopRequireDefault(_Register);
   
@@ -3642,11 +4044,11 @@ module.exports =
   exports.default = (0, _withStyles2.default)(_Register2.default)(Register);
 
 /***/ },
-/* 85 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
   
-      var content = __webpack_require__(86);
+      var content = __webpack_require__(94);
       var insertCss = __webpack_require__(23);
   
       if (typeof content === 'string') {
@@ -3676,7 +4078,7 @@ module.exports =
     
 
 /***/ },
-/* 86 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(22)();
@@ -3693,7 +4095,7 @@ module.exports =
   };
 
 /***/ },
-/* 87 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3718,7 +4120,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _Content = __webpack_require__(88);
+  var _Content = __webpack_require__(96);
   
   var _Content2 = _interopRequireDefault(_Content);
   
@@ -3802,7 +4204,7 @@ module.exports =
       */
 
 /***/ },
-/* 88 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3839,7 +4241,7 @@ module.exports =
   
   var _withStyles2 = _interopRequireDefault(_withStyles);
   
-  var _Content = __webpack_require__(89);
+  var _Content = __webpack_require__(97);
   
   var _Content2 = _interopRequireDefault(_Content);
   
@@ -3905,11 +4307,11 @@ module.exports =
   exports.default = (0, _withStyles2.default)(_Content2.default)(Content);
 
 /***/ },
-/* 89 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
   
-      var content = __webpack_require__(90);
+      var content = __webpack_require__(98);
       var insertCss = __webpack_require__(23);
   
       if (typeof content === 'string') {
@@ -3939,7 +4341,7 @@ module.exports =
     
 
 /***/ },
-/* 90 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(22)();
@@ -3956,7 +4358,7 @@ module.exports =
   };
 
 /***/ },
-/* 91 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -4004,7 +4406,7 @@ module.exports =
       */
 
 /***/ },
-/* 92 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -4049,7 +4451,7 @@ module.exports =
                 _context.next = 2;
                 return new _promise2.default(function (resolve) {
                   !/* require.ensure */(function (require) {
-                    return resolve(__webpack_require__(93).default);
+                    return resolve(__webpack_require__(101).default);
                   }(__webpack_require__));
                 });
   
@@ -4075,7 +4477,7 @@ module.exports =
       */
 
 /***/ },
-/* 93 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -4121,7 +4523,7 @@ module.exports =
   
   var _withStyles2 = _interopRequireDefault(_withStyles);
   
-  var _Detail = __webpack_require__(94);
+  var _Detail = __webpack_require__(102);
   
   var _Detail2 = _interopRequireDefault(_Detail);
   
@@ -4183,11 +4585,11 @@ module.exports =
   exports.default = (0, _withStyles2.default)(_Detail2.default)(Detail);
 
 /***/ },
-/* 94 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
   
-      var content = __webpack_require__(95);
+      var content = __webpack_require__(103);
       var insertCss = __webpack_require__(23);
   
       if (typeof content === 'string') {
@@ -4217,7 +4619,7 @@ module.exports =
     
 
 /***/ },
-/* 95 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
   exports = module.exports = __webpack_require__(22)();
@@ -4244,7 +4646,7 @@ module.exports =
   };
 
 /***/ },
-/* 96 */
+/* 104 */
 /***/ function(module, exports) {
 
   module.exports = require("./assets");

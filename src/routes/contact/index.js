@@ -10,6 +10,8 @@
 import React from 'react';
 import Contact from './Contact';
 import s from './Contact.css'
+import Frame from './../lib/Frame'
+import Go from './../go/Go'
 export default {
 
   path: '/contact',
@@ -29,15 +31,23 @@ export default {
   children: [
     {
       path: '/', // Same as /parent
-      action: () => <Contact />,
+      action: () => {
+        console.log('in name router')
+        return (
+          <div className={s.up}>
+            <Go />
+            <Contact />
+          </div>
+        )
+      },
     },
     {
       path: '/name',
       action: async () => {
         console.log('in name router')
         return (
-          <div>
-            <div className={s.open} ></div>
+          <div className={s.up}>
+            <Frame />
             <Contact />
           </div>
         )

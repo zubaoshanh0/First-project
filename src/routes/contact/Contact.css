@@ -22,14 +22,14 @@
 
 .open{
 	display:block;
-	width:100px;
-	height:100px;
-	background:red;
+	width:400px;
+	height: 300px;;
+	border:1px solid #333333;
 	position:fixed;
 	left:50%;
 	top:50%;
-	margin-left:-50px;
-	margin-top:-50px;
+	transform:translate(-50%,-50%);
+	z-index:1000;
 }
 .close{
 	display:none;
@@ -41,4 +41,7 @@
 	top:50%;
 	margin-left:-50px;
 	margin-top:-50px;
+}
+.up{
+	z-index:10;
 }
